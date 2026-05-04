@@ -18,32 +18,23 @@ header {
 
 /* Navigation */
 .navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-padding {
-  padding: 0;
+  padding: 10;
 }
 
 .navigation a {
   display: flex;
-  align-items: center;
-  font-size: 120%;
   color: #fff;
   text-decoration: none;
-  background-color: transparent;
-  padding: 0 15px;
-  height: 100%;
-  transition: background-color 0.3s ease;
 }
 
 .navigation a:hover,
 .navigation a:focus {
   background-color: #555;
-  color: #fff;
 }
 
 /* Page Title */
