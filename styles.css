@@ -23,7 +23,7 @@ header {
 }
 
 .navigation a {
-  display: flex;
+  padding: 1rem 1.5rem;
   color: #fff;
   text-decoration: none;
 }
