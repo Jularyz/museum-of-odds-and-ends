@@ -9,17 +9,21 @@ body {
   padding: 0 16px;
 }
 
-/* Header */
+/* Header (FULL WIDTH) */
 header {
   background-color: #333;
   padding: 15px 0;
+
+  /* Full-width breakout */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 /* Navigation */
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* centers nav links */
 }
 
 .nav-padding {
@@ -38,7 +42,12 @@ header {
   border-bottom: 3px solid #ff0000;
 }
 
-/* Page Title */
+/* Page Title (CENTERED) */
+#page-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
 #page-title h1 {
   margin: 15px 0 0 0;
 }
@@ -117,6 +126,6 @@ img {
   }
 
   #news-sidebar {
-    order: -1; /* moves news above gallery (optional) */
+    order: -1; /* optional: move news above gallery */
   }
 }
