@@ -22,10 +22,6 @@ header {
     justify-content: center;
 }
 
-.nav-padding {
-  padding: 10;
-}
-
 .navigation a {
   display: flex;
   color: #fff;
