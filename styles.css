@@ -21,17 +21,20 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
 .nav-padding {
-  display: flex;
-  align-items: stretch;
   padding: 0;
 }
 
 .navigation a {
   display: flex;
   align-items: center;
+  font-size: 120%;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
   padding: 0 15px;
   height: 100%;
   transition: background-color 0.3s ease;
@@ -43,7 +46,7 @@ header {
   color: #fff;
 }
 
-/* Page Title (CENTERED) */
+/* Page Title */
 #page-title {
   text-align: center;
   padding: 20px 0;
@@ -63,7 +66,7 @@ header {
   gap: 20px;
 }
 
-/* Gallery (Grid) */
+/* Gallery */
 #gallery {
   flex: 3;
   display: grid;
