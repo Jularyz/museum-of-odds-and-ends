@@ -9,12 +9,9 @@ body {
   padding: 0 16px;
 }
 
-/* Header (FULL WIDTH) */
 header {
   background-color: #333;
   padding: 15px 0;
-
-  /* Full-width breakout */
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
@@ -23,7 +20,7 @@ header {
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* centers nav links */
+  justify-content: center;
 }
 
 .nav-padding {
@@ -126,6 +123,21 @@ img {
   }
 
   #news-sidebar {
-    order: -1; /* optional: move news above gallery */
+    order: -1;
   }
+}
+
+/* Accessibility: skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
