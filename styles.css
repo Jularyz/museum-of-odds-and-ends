@@ -47,9 +47,9 @@ header {
 
 /* Main Layout */
 .main-layout {
-  display: flex;
-  padding: 1rem;
-  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* Gallery */
