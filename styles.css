@@ -36,7 +36,8 @@ header {
 
 .navigation a:hover,
 .navigation a:focus {
-  border-bottom: 3px solid #ff0000;
+  background-color: #555;
+  color: #fff;
 }
 
 /* Page Title (CENTERED) */
