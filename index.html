@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8"/>
   <title>Walton Hall Museum of Odds & Ends</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <meta name="author" content="H859074X"/>
+  <meta name="description" content="Explore the Museum of Odds & Ends at Walton Hall, featuring unique artifacts, historical collections, and fascinating exhibits.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="favicon.ico">
+  <meta name="author" content="H859074X"/>
 </head>
+
 <body>
+
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Header & Navigation -->
 <header>
-  <nav class="navigation">
+  <nav class="navigation" aria-label="Main navigation">
     <span class="nav-padding"><a href="index.html">Museum of Odds & Ends</a></span>
     <span class="nav-padding"><a href="placeholder.html">Visit Us</a></span>
     <span class="nav-padding"><a href="placeholder.html">Shop</a></span>
@@ -25,60 +32,95 @@
   <p>Walton Hall, Milton Keynes</p>
 </section>
 
-<!-- Main Layout -->
-<div class="main-layout">
+<!-- Main Content -->
+<main id="main-content">
+  <div class="main-layout">
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <article class="gallery-item">
-      <img src="imgs/fashion-artist-riitta-immonen.jpeg" alt="fashion artist riitta immonen">
-      <a href="https://www.europeana.eu/en/item/2021009/_49F3124C23DA8F15FB71B05E19A14B0A">Fashion Artist Riitta Immonen</a>
-    </article>
+    <!-- Gallery -->
+    <section id="gallery">
+      
+      <article class="gallery-item">
+        <img src="imgs/fashion-artist-riitta-immonen.jpeg"
+             alt="Portrait of fashion artist Riitta Immonen"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/2021009/_49F3124C23DA8F15FB71B05E19A14B0A"
+           target="_blank" rel="noopener noreferrer">
+           Fashion Artist Riitta Immonen
+        </a>
+      </article>
 
-    <article class="gallery-item">
-      <img src="imgs/two-girls-with-cempaka-flowers-in-their-hair.jpeg" alt="two girls with cempaka flowers in their hair">
-      <a href="https://www.europeana.eu/en/item/2048221/europeana_fashion_496757">Two Girls With Cempaka Flowers In Their Hair</a>
-    </article>
+      <article class="gallery-item">
+        <img src="imgs/two-girls-with-cempaka-flowers-in-their-hair.jpeg"
+             alt="Two girls wearing cempaka flowers in their hair"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/2048221/europeana_fashion_496757"
+           target="_blank" rel="noopener noreferrer">
+           Two Girls With Cempaka Flowers In Their Hair
+        </a>
+      </article>
 
-    <article class="gallery-item">
-      <img src="imgs/glass-plate-slide.jpeg" alt="glass plate slide">
-      <a href="https://www.europeana.eu/en/item/9200271/BibliographicResource_3000058904600">Glass Plate Slide</a>
-    </article>
+      <article class="gallery-item">
+        <img src="imgs/glass-plate-slide.jpeg"
+             alt="Historic glass plate photographic slide"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/9200271/BibliographicResource_3000058904600"
+           target="_blank" rel="noopener noreferrer">
+           Glass Plate Slide
+        </a>
+      </article>
 
-    <article class="gallery-item">
-      <img src="imgs/budapest-chainbridge.jpeg" alt="budapest chainbridge">
-      <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP">Budapest Chainbridge</a>
-    </article>
+      <article class="gallery-item">
+        <img src="imgs/budapest-chainbridge.jpeg"
+             alt="The Chain Bridge in Budapest spanning the Danube River"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP"
+           target="_blank" rel="noopener noreferrer">
+           Budapest Chainbridge
+        </a>
+      </article>
 
-    <article class="gallery-item">
-      <img src="imgs/crambus-perlella.jpeg" alt="crambus perlella (scopoli, 1763)">
-      <a href="https://www.europeana.eu/en/item/854/NHMUKXBMNHXEXXNHMUK013979616">Crambus Perlella (Scopoli, 1763)</a>
-    </article>
+      <article class="gallery-item">
+        <img src="imgs/crambus-perlella.jpeg"
+             alt="Specimen of Crambus perlella moth"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/854/NHMUKXBMNHXEXXNHMUK013979616"
+           target="_blank" rel="noopener noreferrer">
+           Crambus Perlella (Scopoli, 1763)
+        </a>
+      </article>
 
-    <article class="gallery-item">
-      <img src="imgs/three-riders-at-sea.jpeg" alt="three riders at sea">
-      <a href="https://www.europeana.eu/en/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_18600">Three Riders At Sea</a>
-    </article>
-  </section>
+      <article class="gallery-item">
+        <img src="imgs/three-riders-at-sea.jpeg"
+             alt="Painting of three riders at sea"
+             loading="lazy">
+        <a href="https://www.europeana.eu/en/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_18600"
+           target="_blank" rel="noopener noreferrer">
+           Three Riders At Sea
+        </a>
+      </article>
 
-  <!-- News sidebar -->
-  <aside id="news-sidebar">
-    <h2>News</h2>
+    </section>
 
-    <article class="news-entry">
-      <h3>Lorem ipsum</h3>
-      <h4>12/11/2024</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lacus ac justo fringilla elementum a et lacus.</p>
-    </article>
+    <!-- News sidebar -->
+    <aside id="news-sidebar">
+      <h2>News</h2>
 
-    <article class="news-entry">
-      <h3>Nam vel vestibulum</h3>
-      <h4>08/10/2024</h4>
-      <p>Nam vel vestibulum nibh. Cras interdum fringilla ligula, nec eleifend nisi vehicula vitae. Quisque euismod vestibulum pellentesque.</p>
-    </article>
-  </aside>
+      <article class="news-entry">
+        <h3>Lorem ipsum</h3>
+        <h4>12/11/2024</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lacus ac justo fringilla elementum a et lacus.</p>
+      </article>
 
-</div>
+      <article class="news-entry">
+        <h3>Nam vel vestibulum</h3>
+        <h4>08/10/2024</h4>
+        <p>Nam vel vestibulum nibh. Cras interdum fringilla ligula, nec eleifend nisi vehicula vitae.</p>
+      </article>
+
+    </aside>
+
+  </div>
+</main>
 
 </body>
 </html>
