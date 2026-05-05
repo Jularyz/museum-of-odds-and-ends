@@ -3,6 +3,7 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   color: #333;
+  background: #f7f7f7;
 }
 
 /* HEADER */
@@ -35,7 +36,8 @@ header {
 /* LAYOUT */
 .main-layout {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 3rem;
   max-width: 1200px;
   margin: auto;
   padding: 0 1.5rem;
@@ -43,7 +45,6 @@ header {
 
 /* ===== GALLERY ===== */
 #gallery {
-  flex: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -58,7 +59,6 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* LIFT EFFECT */
 .gallery-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0,0,0,0.15);
@@ -85,7 +85,6 @@ header {
   transition: 0.3s ease;
 }
 
-/* HOVER EFFECT */
 .gallery-item:hover img {
   transform: scale(1.08);
   filter: brightness(0.8);
@@ -96,13 +95,62 @@ header {
   transform: translateY(0);
 }
 
-/* ===== SIDEBAR ===== */
-#news-sidebar {
-  flex: 1;
+/* ===== NEWS ===== */
+#news-section h2 {
+  margin-bottom: 1.5rem;
 }
 
-.news-entry {
-  margin-bottom: 1rem;
+/* GRID */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARD */
+.news-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.news-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+/* DATE */
+.news-card .date {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* TOP ACCENT */
+.news-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #333, #777);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.news-card:hover::before {
+  opacity: 1;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -113,16 +161,12 @@ header {
 }
 
 @media (max-width: 768px) {
-  .main-layout {
-    flex-direction: column;
-  }
-
   #gallery {
     grid-template-columns: 1fr;
   }
 }
 
-/* ===== SKIP LINK ===== */
+/* SKIP LINK */
 .skip-link {
   position: absolute;
   top: -40px;
