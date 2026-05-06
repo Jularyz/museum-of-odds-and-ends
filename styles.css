@@ -6,34 +6,63 @@ body {
   background: #f7f7f7;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
-  background: #333;
+  background: linear-gradient(180deg, #111, #1a1a1a);
+  position: sticky;
+  top: 0;
 }
 
 .navigation {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.navigation a {
-  color: white;
-  padding: 1rem 1.5rem;
+.logo {
+  margin-right: auto;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s;
 }
 
-.navigation a:hover {
-  background: #555;
+.nav-link {
+  color: #bbb;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
 }
 
-/* TITLE */
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #4ade80;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== TITLE ===== */
 #page-title {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
 }
 
-/* LAYOUT */
+/* ===== LAYOUT ===== */
 .main-layout {
   display: flex;
   flex-direction: column;
@@ -50,44 +79,41 @@ header {
   gap: 1.5rem;
 }
 
-/* CARD */
 .gallery-item {
-  position: relative;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .gallery-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
 }
 
-/* IMAGE */
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: 0.4s;
 }
 
-/* OVERLAY */
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+/* overlay */
 .overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 1rem;
   color: white;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.08);
-  filter: brightness(0.8);
+.gallery-item {
+  position: relative;
 }
 
 .gallery-item:hover .overlay {
@@ -96,67 +122,60 @@ header {
 }
 
 /* ===== NEWS ===== */
-#news-section h2 {
-  margin-bottom: 1.5rem;
-}
-
-/* GRID */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 1.5rem;
 }
 
-/* CARD */
 .news-card {
   background: white;
   padding: 1.5rem;
   border-radius: 14px;
+  transition: 0.25s;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .news-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
 }
 
-/* TITLE */
-.news-card h3 {
-  margin: 0 0 0.5rem;
+/* ===== PLACEHOLDER ===== */
+.placeholder-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #1a1a1a, #0f0f0f);
+  color: white;
 }
 
-/* DATE */
-.news-card .date {
-  font-size: 0.8rem;
-  color: #777;
-  display: block;
-  margin-bottom: 0.8rem;
+.placeholder-card {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
-/* TOP ACCENT */
-.news-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(90deg, #333, #777);
-  opacity: 0;
-  transition: opacity 0.3s;
+.back-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #4ade80;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.news-card:hover::before {
-  opacity: 1;
+.back-btn:hover {
+  transform: scale(1.05);
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   #gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -170,9 +189,6 @@ header {
 .skip-link {
   position: absolute;
   top: -40px;
-  background: black;
-  color: white;
-  padding: 8px;
 }
 
 .skip-link:focus {
